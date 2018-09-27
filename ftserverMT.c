@@ -199,7 +199,7 @@ int main(int argc, char *argv[])
 			}
 			else
 			{
-				//Send acknowledgement to client on control connection 
+				//Send acknowledgment to client on control connection 
 				//--(acknowledging request for directory contents)
 				char validCommandResponse[] = "CA";
 				strcat(validCommandResponse, dataTransferPort);

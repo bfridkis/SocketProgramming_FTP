@@ -55,7 +55,7 @@ clientConnectionSocket.connect((inputParameters["serverName"], inputParameters["
 clientConnectionSocket.send((inputParameters["fileName"] + dataPortMessage + 
 	inputParameters["command"][1]).encode())
 	
-#Receive acknowledgement from server on control connection
+#Receive acknowledgment from server on control connection
 connectionResponse = clientConnectionSocket.recv(2)
 #print(connectionResponse.decode("utf-8", "ignore") + "\n")
 
@@ -72,8 +72,8 @@ if connectionResponse.decode("utf-8", "ignore") == ("CA"):
 	else:
 		#check if file with same name as requested file exists in the current directory
 		#--If so, append a version number to the file before opening. 
-		#--(Note that even if the user indicats an overwrite for the existing file,
-		#-- a file with a unique name is created initally. This is to maintain functionality
+		#--(Note that even if the user indicates an overwrite for the existing file,
+		#-- a file with a unique name is created initially. This is to maintain functionality
 		#-- when this client program is running in the same directory as its corresponding server.
 		#-- In this case, once the transfer is complete, the pre-existing file
 		#-- (which was read from by the server) will be deleted and the newly created

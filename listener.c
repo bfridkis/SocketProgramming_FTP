@@ -112,7 +112,7 @@ connection listener(char* portNumber, int backLog, int print)
 		printf("\nWaiting for connection on port %s...\n", portNumber);
 	}
 	
-	//sockfd (parameter 3) is the socket handle for the TCP 'handshake' connection.
+	//sockfd is the socket handle for the TCP 'handshake' connection.
 	//--After accepting a connection from the client, it will establish c.handle as
 	//--the 'data' connection socket, via the acceptConnection function. 
 	connection c = acceptConnection(sockfd, print);

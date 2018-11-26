@@ -114,7 +114,7 @@ int main(int argc, char *argv[])
 				//If successful (i.e. file exists and no errors occur)...
 				if(fp)
 				{
-					//Send command acknowledgement to client on control connection
+					//Send command acknowledgment to client on control connection
 					char validCommandResponse[] = "CA";
 					strcat(validCommandResponse, dataTransferPort);
 					send(cc.handle, validCommandResponse, strlen(validCommandResponse), 0); 
